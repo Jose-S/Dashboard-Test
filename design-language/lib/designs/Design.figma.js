@@ -19,7 +19,7 @@ const designColors = {
     green3: prefabs_1.Color.rgba(111, 207, 151, 1),
     tertiary: prefabs_1.Color.rgba(7, 35, 100, 1),
     secondary: prefabs_1.Color.rgba(43, 43, 144, 1),
-    primary: prefabs_1.Color.rgba(69, 238, 177, 1),
+    primary: prefabs_1.Color.rgba(69, 115, 238, 1),
     background: prefabs_1.Color.rgba(240, 244, 255, 1),
     white: prefabs_1.Color.rgba(255, 255, 255, 1),
     red: prefabs_1.Color.rgba(235, 87, 87, 1),

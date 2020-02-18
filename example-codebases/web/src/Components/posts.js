@@ -35,7 +35,7 @@ const PostFilter = props => (
 
 export const PostList = props => {
 	var theme = useTheme();
-
+	console.log("THEME OF H1", theme.typography.h5);
 	return (
 		<List {...props} filters={<PostFilter />}>
 			<Datagrid>
@@ -46,7 +46,7 @@ export const PostList = props => {
 				<TextField source="title" />
 				<EditButton />
 				<div className={"test"}>HELLO</div>
-				<StyledButton>HELLO</StyledButton>
+				<StyledButton className={"fontSize4"}>HELLO</StyledButton>
 				<ShowButton />
 			</Datagrid>
 		</List>

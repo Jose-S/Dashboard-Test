@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const prefabs_1 = require("@diez/prefabs");
 const Margin_1 = require("./components/Margin");
 const Design_figma_1 = require("./designs/Design.figma");
 /**
@@ -8,67 +7,74 @@ const Design_figma_1 = require("./designs/Design.figma");
  * properties will be made available in the SDKs transpiled with Diez.
  */
 const colors = {
-    white: Design_figma_1.designTokens.colors.green1,
-    black: prefabs_1.Color.hex('#000010'),
-    purple: prefabs_1.Color.rgb(86, 35, 238),
-    darkPurple: prefabs_1.Color.rgb(22, 11, 54)
+    white: Design_figma_1.designTokens.colors.white,
+    black: Design_figma_1.designTokens.colors.gray1,
+    gray2: Design_figma_1.designTokens.colors.gray2,
+    gray3: Design_figma_1.designTokens.colors.gray3,
+    gray4: Design_figma_1.designTokens.colors.gray4,
+    gray5: Design_figma_1.designTokens.colors.gray5,
+    gray6: Design_figma_1.designTokens.colors.gray6,
+    red: Design_figma_1.designTokens.colors.red,
+    orange: Design_figma_1.designTokens.colors.orange,
+    yellow: Design_figma_1.designTokens.colors.yellow,
+    green1: Design_figma_1.designTokens.colors.green1,
+    green2: Design_figma_1.designTokens.colors.green2,
+    green3: Design_figma_1.designTokens.colors.green3,
+    primary: Design_figma_1.designTokens.colors.primary,
+    secondary: Design_figma_1.designTokens.colors.secondary,
+    tertiary: Design_figma_1.designTokens.colors.tertiary,
+    primaryLigth: Design_figma_1.designTokens.colors.background,
 };
 /**
  * You can reference properties from other components.
  */
 const palette = {
-    contentBackground: colors.darkPurple,
-    text: colors.black,
-    caption: colors.white,
-    headerBackground: prefabs_1.LinearGradient.make(180 /* Bottom */, colors.darkPurple, colors.black)
+    // Backgrounds
+    background: colors.primaryLigth,
+    cardBackground: colors.white,
+    // Text
+    textPrimary: colors.black,
+    textSecondary: colors.gray3,
+    textTertiary: colors.gray4,
+    textDarkContrast: colors.white,
+    textHighEmphasis: colors.primary,
+    textLowEmphasis: colors.secondary,
+    //Colors
+    primaryColor: colors.primary,
+    primaryColorLigth: colors.primaryLigth,
+    secondaryColor: colors.secondary,
+    tertiaryColor: colors.tertiary,
+    redColor: colors.red,
+    orangeColor: colors.orange,
+    yellowColor: colors.yellow,
+    greenColor: colors.green2,
 };
 /**
  * All of rich language features of TypeScript are at your disposal; for example,
  * you can define an object to keep track of your fonts.
  */
-const Fonts = {
-    SourceSansPro: {
-        Regular: prefabs_1.Font.fromFile('assets/SourceSansPro-Regular.ttf')
-    }
-};
+const Fonts = { ...Design_figma_1.designFonts };
 /**
  * Typographs encapsulate type styles with support for a specific font, font size,
  * and color. More typograph properties are coming soon.
  */
-const typography = {
-    heading1: new prefabs_1.Typograph({
-        font: Fonts.SourceSansPro.Regular,
-        fontSize: 64,
-        color: palette.text
-    }),
-    body: new prefabs_1.Typograph({
-        font: Fonts.SourceSansPro.Regular,
-        fontSize: 18,
-        color: palette.text,
-        alignment: "center" /* Center */
-    }),
-    caption: new prefabs_1.Typograph({
-        font: Fonts.SourceSansPro.Regular,
-        fontSize: 14,
-        color: palette.caption
-    })
-};
+// const typography = {...designTokens.typography};
 /**
  * In addition to colors and typography, you can also collect other types of
  * design language primitives in components as well — such as images, icons &
  * animations.
  */
 const images = {
-    logo: prefabs_1.Image.responsive('assets/logo.png', 52, 48),
-    masthead: prefabs_1.Image.responsive('assets/masthead.png', 208, 88)
+// logo: Image.responsive('assets/logo.png', 52, 48),
+// masthead: Image.responsive('assets/masthead.png', 208, 88)
 };
 /**
  * You can even collect your own custom components.
  */
 const layoutValues = {
-    spacingSmall: 5,
-    spacingMedium: 25,
-    spacingLarge: 40,
+    spacingSmall: 8,
+    spacingMedium: 32,
+    spacingLarge: 64,
     contentMargin: new Margin_1.Margin({
         top: 40,
         left: 10,
@@ -76,20 +82,26 @@ const layoutValues = {
         bottom: 10
     })
 };
+function getFontFamilies() {
+    let fonts = new Set();
+    // Add all fonts
+    Object.values(Design_figma_1.designFonts).forEach((val) => Object.values(val).forEach((val => fonts.add(val.name))));
+    // Convert To String
+    let fontsString = `'${[...fonts].join("', '")}'`;
+    return `${fontsString}, sans-serif`;
+}
+console.log(getFontFamilies());
 /**
  * You can also define strings.
  */
 const strings = {
     title: 'Diez',
     caption: 'Keep your designs in sync with code',
-    helper: 'Please Modify the contents of “src/DesignLanguage.ts”.'
+    helper: 'Please Modify the contents of “src/DesignLanguage.ts”.',
+    fontFamilies: getFontFamilies(),
 };
 const shadows = {
-    logo: new prefabs_1.DropShadow({
-        offset: prefabs_1.Point2D.make(0, 1),
-        radius: 16,
-        color: colors.black.fade(0.59)
-    })
+    ...Design_figma_1.designTokens.shadows
 };
 /**
  * Note how this component is exported from `index.ts`. Diez compiles these
@@ -108,7 +120,7 @@ const shadows = {
  */
 exports.designLanguage = {
     palette,
-    typography,
+    typography: Design_figma_1.designTokens.typography,
     images,
     layoutValues,
     strings,

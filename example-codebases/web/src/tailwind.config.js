@@ -1,5 +1,6 @@
-const diez = require('diez-dashboard');
-const createDarkTheme = require('./themes/dark-theme').default;
+const diez = require("diez-dashboard");
+const createDarkTheme = require("./themes/dark-theme").default;
+const plugin = require("tailwindcss/plugin");
 
 // var diezz = new diez.Diez(diez.DesignLanguage);
 // console.log(diezz.component.palette.caption.color);
@@ -9,27 +10,49 @@ const createDarkTheme = require('./themes/dark-theme').default;
 module.exports = {
 	theme: {
 		fontSize: {
-			xs: '.75rem',
-			sm: '.875rem',
-			tiny: '.875rem',
-			base: '1rem',
-			lg: '1.125rem',
-			xl: '1.25rem',
-			'2xl': '1.5rem',
-			'3xl': '1.875rem',
-			'4xl': '2.25rem',
-			'5xl': '3rem',
-			'6xl': '4rem',
-			'7xl': '5rem'
+			xs: ".75rem",
+			sm: ".875rem",
+			tiny: ".875rem",
+			base: "1rem",
+			lg: "1.125rem",
+			xl: "1.25rem",
+			"2xl": "1.5rem",
+			"3xl": "1.875rem",
+			"4xl": "2.25rem",
+			"5xl": "3rem",
+			"6xl": "4rem",
+			"7xl": "5rem"
 		},
+		fontFamily: {
+			sans: ["Inter"]
+		},
+		textStyle: theme => ({
+			heading: {
+				output: false, // this means there won't be a "heading" component in the CSS, but it can be extended
+				fontWeight: theme("fontWeight.bold"),
+				lineHeight: theme("lineHeight.tight")
+			}
+		}),
 		extend: {
 			colors: {
-				primary: 'var(--color-bg-primary)',
-				secondary: '#5c6ac4',
-				neutral: '#5c6ac4'
+				primary: "var(--color-bg-primary)",
+				secondary: "#5c6ac4",
+				neutral: "#5c6ac4"
+			},
+			spacing: {
+				"28": "7rem"
 			}
 		}
 	},
 	variants: {},
-	plugins: []
+	plugins: [
+		require("tailwindcss-typography")({
+			// all these options default to the values specified here
+			ellipsis: false, // whether to generate ellipsis utilities
+			hyphens: false, // whether to generate hyphenation utilities
+			kerning: false, // whether to generate kerning utilities
+			textUnset: false, // whether to generate utilities to unset text properties
+			componentPrefix: "c-" // the prefix to use for text style classes
+		})
+	]
 };
