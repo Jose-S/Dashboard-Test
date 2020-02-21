@@ -1,11 +1,12 @@
 const diez = require("diez-dashboard");
-const createDarkTheme = require("./themes/dark-theme").default;
+const createLigthTheme = require("./themes/light-theme").default;
 const plugin = require("tailwindcss/plugin");
 
-// var diezz = new diez.Diez(diez.DesignLanguage);
+var diezz = new diez.Diez(diez.DesignLanguage);
 // console.log(diezz.component.palette.caption.color);
 // console.log(createDarkTheme(diezz.component));
-// var theme = createDarkTheme(diezz.component);
+// var lightTheme = createLigthTheme(diezz.component.typography.fontSize4.style);
+console.log({ ...diezz.component.typography.fontSize4.style });
 
 module.exports = {
 	theme: {
@@ -26,13 +27,6 @@ module.exports = {
 		fontFamily: {
 			sans: ["Inter"]
 		},
-		textStyle: theme => ({
-			heading: {
-				output: false, // this means there won't be a "heading" component in the CSS, but it can be extended
-				fontWeight: theme("fontWeight.bold"),
-				lineHeight: theme("lineHeight.tight")
-			}
-		}),
 		extend: {
 			colors: {
 				primary: "var(--color-bg-primary)",
@@ -46,13 +40,17 @@ module.exports = {
 	},
 	variants: {},
 	plugins: [
-		require("tailwindcss-typography")({
-			// all these options default to the values specified here
-			ellipsis: false, // whether to generate ellipsis utilities
-			hyphens: false, // whether to generate hyphenation utilities
-			kerning: false, // whether to generate kerning utilities
-			textUnset: false, // whether to generate utilities to unset text properties
-			componentPrefix: "c-" // the prefix to use for text style classes
+		plugin(function({ addUtilities }) {
+			const newUtilities = {
+				".fontSize-1": {
+					transform: "skewY(-10deg)"
+				},
+				".fontSize-4": {
+					...diezz.component.typography.fontSize4.style
+				}
+			};
+
+			addUtilities(newUtilities);
 		})
 	]
 };

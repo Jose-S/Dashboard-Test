@@ -1,21 +1,11 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import green from "@material-ui/core/colors/green";
-import purple from "@material-ui/core/colors/purple";
 import { Diez, DesignLanguage } from "diez-dashboard";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../tailwind.config.js";
 
 const fullConfig = resolveConfig(tailwindConfig);
-const primaryGreen = green[500];
-const accentGreen = green.A200;
-const darkGreen = green[900];
-const primaryPurple = purple[500];
-const accentPurple = purple.A200;
-const darkPurple = purple[900];
 
-function createLigthTheme(dss) {
-	const ds = new Diez(DesignLanguage).component;
-
+function createLigthTheme(ds) {
 	if (ds !== undefined) {
 		console.log(ds, ds.typography.fontSize1.font.name);
 		console.log("TAILWIND", fullConfig);

@@ -90,7 +90,7 @@ function getFontFamilies() {
     let fontsString = `'${[...fonts].join("', '")}'`;
     return `${fontsString}, sans-serif`;
 }
-console.log(getFontFamilies());
+// console.log(getFontFamilies());
 /**
  * You can also define strings.
  */
