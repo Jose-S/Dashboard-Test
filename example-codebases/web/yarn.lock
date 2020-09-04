@@ -841,18 +841,6 @@
     openurl "1.1.1"
     yargs "6.6.0"
 
-"@diez/framework-core@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/framework-core/-/framework-core-10.2.3.tgz#696d876207bbcd11ab545f4f2cf7ce27c9e9ad82"
-  integrity sha512-5pZNw3kfI7NtIuP0/JuK58luBRT4DEz0qs2GSHAzhiwPYgWYHlpN0ITML7UAJOcylEw8SsFrTEdum3xl02WW/A==
-
-"@diez/web-sdk-common@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/web-sdk-common/-/web-sdk-common-10.2.3.tgz#1aca5e0f23a3fd29e7511ca7733ea0b49806b314"
-  integrity sha512-JaQpadJ+bEw6J5Hc54rfpVjY4lUimORXKNhKaCtcW5iISkvruyjASWgvdl7Zfe0PD1GMgyqJfnIE/oTtJHBDwg==
-  dependencies:
-    "@diez/framework-core" "^10.2.3"
-
 "@emotion/cache@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.27.tgz#7895db204e2c1a991ae33d51262a3a44f6737303"
@@ -3993,7 +3981,6 @@ diacritic@0.0.2:
 
 "diez-dashboard@link:../../design-language/build/diez-dashboard-web":
   version "0.0.0"
-  uid ""
 
 diez-webpack-plugin@^10.2.3:
   version "10.2.3"
@@ -6753,9 +6740,9 @@ map-visit@^1.0.0:
     object-visit "^1.0.0"
 
 markdown-to-jsx@^6.9.1, markdown-to-jsx@^6.9.3:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-6.11.0.tgz#a2e3f2bc781c3402d8bb0f8e0a12a186474623b0"
-  integrity sha512-RH7LCJQ4RFmPqVeZEesKaO1biRzB/k4utoofmTCp3Eiw6D7qfvK8fzZq/2bjEJAtVkfPrM5SMt5APGf2rnaKMg==
+  version "6.11.4"
+  resolved "https://registry.yarnpkg.com/markdown-to-jsx/-/markdown-to-jsx-6.11.4.tgz#b4528b1ab668aef7fe61c1535c27e837819392c5"
+  integrity sha512-3lRCD5Sh+tfA52iGgfs/XZiw33f7fFX9Bn55aNnVNUd2GzLDkOWyKYYD8Yju2B1Vn+feiEdgJs8T6Tg0xNokPw==
   dependencies:
     prop-types "^15.6.2"
     unquote "^1.1.0"
@@ -8575,10 +8562,15 @@ react-inspector@^4.0.0:
     prop-types "^15.6.1"
     storybook-chromatic "^2.2.2"
 
-react-is@^16.5.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
+react-is@^16.5.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.4, react-is@^16.9.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+
+react-is@^16.8.1:
+  version "16.13.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
