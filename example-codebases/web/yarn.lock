@@ -841,18 +841,6 @@
     openurl "1.1.1"
     yargs "6.6.0"
 
-"@diez/framework-core@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/framework-core/-/framework-core-10.2.3.tgz#696d876207bbcd11ab545f4f2cf7ce27c9e9ad82"
-  integrity sha512-5pZNw3kfI7NtIuP0/JuK58luBRT4DEz0qs2GSHAzhiwPYgWYHlpN0ITML7UAJOcylEw8SsFrTEdum3xl02WW/A==
-
-"@diez/web-sdk-common@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/web-sdk-common/-/web-sdk-common-10.2.3.tgz#1aca5e0f23a3fd29e7511ca7733ea0b49806b314"
-  integrity sha512-JaQpadJ+bEw6J5Hc54rfpVjY4lUimORXKNhKaCtcW5iISkvruyjASWgvdl7Zfe0PD1GMgyqJfnIE/oTtJHBDwg==
-  dependencies:
-    "@diez/framework-core" "^10.2.3"
-
 "@emotion/cache@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.27.tgz#7895db204e2c1a991ae33d51262a3a44f6737303"
@@ -3993,7 +3981,6 @@ diacritic@0.0.2:
 
 "diez-dashboard@link:../../design-language/build/diez-dashboard-web":
   version "0.0.0"
-  uid ""
 
 diez-webpack-plugin@^10.2.3:
   version "10.2.3"
@@ -4703,9 +4690,9 @@ fbjs@^0.8.1:
     ua-parser-js "^0.7.18"
 
 figgy-pudding@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
-  integrity sha512-vNKxJHTEKNThjfrdJwHc7brvM6eVevuO5nTj6ez8ZQ1qbXTvGthucRF7S4vf2cr71QVnT70V34v0S1DyQsti0w==
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
+  integrity sha512-0btnI/H8f2pavGMN8w40mlSKOfTK2SVJmBfBeVIj3kNw0swwgzyRq0d5TJVOwodFmtvpPeWPN/MCcfuWF0Ezbw==
 
 figures@^2.0.0:
   version "2.0.0"
@@ -9596,9 +9583,9 @@ sshpk@^1.7.0:
     tweetnacl "~0.14.0"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
-  integrity sha512-3Wge10hNcT1Kur4PDFwEieXSCMCJs/7WvSACcrMYrNp+b8kDL1/0wJch5Ni2WrtwEa2IO8OsVfeKIciKCDx/QA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
+  integrity sha512-cepbSq/neFK7xB6A50KHN0xHDotYzq58wWCa5LeWqnPrHG8GzfEjO/4O8kpmcGW+oaxkvhEJCWgbgNk4/ZV93Q==
   dependencies:
     figgy-pudding "^3.5.1"
 
