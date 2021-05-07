@@ -841,18 +841,6 @@
     openurl "1.1.1"
     yargs "6.6.0"
 
-"@diez/framework-core@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/framework-core/-/framework-core-10.2.3.tgz#696d876207bbcd11ab545f4f2cf7ce27c9e9ad82"
-  integrity sha512-5pZNw3kfI7NtIuP0/JuK58luBRT4DEz0qs2GSHAzhiwPYgWYHlpN0ITML7UAJOcylEw8SsFrTEdum3xl02WW/A==
-
-"@diez/web-sdk-common@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/web-sdk-common/-/web-sdk-common-10.2.3.tgz#1aca5e0f23a3fd29e7511ca7733ea0b49806b314"
-  integrity sha512-JaQpadJ+bEw6J5Hc54rfpVjY4lUimORXKNhKaCtcW5iISkvruyjASWgvdl7Zfe0PD1GMgyqJfnIE/oTtJHBDwg==
-  dependencies:
-    "@diez/framework-core" "^10.2.3"
-
 "@emotion/cache@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.27.tgz#7895db204e2c1a991ae33d51262a3a44f6737303"
@@ -3993,7 +3981,6 @@ diacritic@0.0.2:
 
 "diez-dashboard@link:../../design-language/build/diez-dashboard-web":
   version "0.0.0"
-  uid ""
 
 diez-webpack-plugin@^10.2.3:
   version "10.2.3"
@@ -10313,9 +10300,9 @@ typescript-tuple@^2.2.1:
     typescript-compare "^0.0.2"
 
 ua-parser-js@^0.7.18:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@3.4.x:
   version "3.4.10"
