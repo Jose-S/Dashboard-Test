@@ -841,18 +841,6 @@
     openurl "1.1.1"
     yargs "6.6.0"
 
-"@diez/framework-core@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/framework-core/-/framework-core-10.2.3.tgz#696d876207bbcd11ab545f4f2cf7ce27c9e9ad82"
-  integrity sha512-5pZNw3kfI7NtIuP0/JuK58luBRT4DEz0qs2GSHAzhiwPYgWYHlpN0ITML7UAJOcylEw8SsFrTEdum3xl02WW/A==
-
-"@diez/web-sdk-common@^10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@diez/web-sdk-common/-/web-sdk-common-10.2.3.tgz#1aca5e0f23a3fd29e7511ca7733ea0b49806b314"
-  integrity sha512-JaQpadJ+bEw6J5Hc54rfpVjY4lUimORXKNhKaCtcW5iISkvruyjASWgvdl7Zfe0PD1GMgyqJfnIE/oTtJHBDwg==
-  dependencies:
-    "@diez/framework-core" "^10.2.3"
-
 "@emotion/cache@^10.0.27":
   version "10.0.27"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.27.tgz#7895db204e2c1a991ae33d51262a3a44f6737303"
@@ -3993,7 +3981,6 @@ diacritic@0.0.2:
 
 "diez-dashboard@link:../../design-language/build/diez-dashboard-web":
   version "0.0.0"
-  uid ""
 
 diez-webpack-plugin@^10.2.3:
   version "10.2.3"
@@ -8298,9 +8285,9 @@ querystring@0.2.0, querystring@^0.2.0:
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
 querystringify@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
-  integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
 quick-format-unescaped@^1.1.1:
   version "1.1.2"
@@ -10444,9 +10431,9 @@ url-loader@^2.0.1:
     schema-utils "^2.5.0"
 
 url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
+  integrity sha512-HOfCOUJt7iSYzEx/UqgtwKRMC6EU91NFhsCHMv9oM03VJcVo2Qrp8T8kI9D7amFf1cu+/3CEhgb3rF9zL7k85Q==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
